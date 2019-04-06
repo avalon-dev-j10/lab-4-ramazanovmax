@@ -28,7 +28,7 @@ public class Main {
             Sort sort = new SortClass();
             sort.sort(strings);
             for(String string: strings){
-                System.out.println(string);
+                //System.out.println(string);
             }
             
             
@@ -46,6 +46,10 @@ public class Main {
             for(int i=0; i<persons.length;i++){
                 persons[i] = new PersonClass(randomString(), new Date((long) (75599999L + (Math.random() * 1553999999999L))));
             }
+            for(Person person : persons){
+                System.out.println(person.getName()+" "+ new SimpleDateFormat("yyyy-MM-dd").format(person.getBirthDate()));
+            }
+            
 
         /*
          * TODO(Студент): Проинициализируйте переменную sort
